@@ -1,0 +1,57 @@
+import Nav from "../../componentes/nav/nav";
+import sofa from '../../assets/sofa.webp'
+import seta from '../../assets/seta-direita.png'
+import mulher_com_planta from '../../assets/mulher_planta.png'
+import imagem1 from '../../assets/image 26.png'
+import imagem2 from '../../assets/image 27.png'
+import imagem3 from '../../assets/image 28.png'
+import imagem4 from '../../assets/image 29.png'
+import imagem5 from '../../assets/image 30.png'
+import imagem6 from '../../assets/image 31.png'
+import Personalize from "../../componentes/Personalize/personalize";
+
+function Principal() {
+    return (
+        <div>
+            <Nav />
+            <div className="flex justify-center h-screen">
+                <div className="max-w-screen-2xl">
+                    <div className="flex h-2/4">
+                        <img src={sofa} className="w-2/5" />
+                        <div className="w-3/5 bg-no-sofa">
+                            <p className="font-titulo-nav p-9 text-5xl mt-8">Seu bem-estar em primeiro lugar!</p>
+                            <h1 className="font-light text-4xl p-9 pb-0">Leia mais sobre as plantas que contribuem para o seu bem-estar diminuindo o estresse e ansiedade!</h1>
+                            <div className="flex justify-end mr-20">
+                                <img src={seta} className="w-20" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bg-verde-nav w-full h-[54rem] mt-10 flex">
+                        <div className="w-3/5 p-14">
+                            <p className="font-titulo-nav text-[68px] leading-[4.5rem]">Veja o nosso acervo e escolha a sua planta:</p>
+                            <div className="">
+                                <div className="flex mt-16 justify-around">
+                                    <img src={imagem1} className="h-60"/>
+                                    <img src={imagem2} className="h-60"/>
+                                    <img src={imagem3} className="h-60"/>
+                                </div>
+                                <div className="flex mt-16 justify-around">
+                                    <img src={imagem4} className="h-60"/>
+                                    <img src={imagem5} className="h-60"/>
+                                    <img src={imagem6} className="h-60"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-2/4 p-14">
+                            <img src={mulher_com_planta} className="w-full h-[47rem]" />
+                        </div>
+                    </div>
+                    {/* <div className="bg-no-sofa w-full h-72"/> */}
+                    <Personalize/>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Principal
