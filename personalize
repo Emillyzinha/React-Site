@@ -7,8 +7,8 @@ function Personalize() {
     return (
         <div className='flex h-full mt-10'>
             <div className='flex'>
-                <div className='flex bg-[#F5F5F5] border-[#D9D9D9] w-2/4 h-2/4'>
-                    <img src={mulher_vaso} className='' />
+                <div className='flex bg-white border-2 border-para-borda w-2/4 h-2/5'>
+                    <img src={mulher_vaso} className='h-full' />
                     <div>
                         <p className='font-titulo-nav font-bold text-4xl pt-14 pl-6'>Personalize seu vaso!</p>
                         <div className='w-96 text-right'>
@@ -21,10 +21,10 @@ function Personalize() {
                         </div>
                     </div>
                 </div>
-                <div className='flex ml-[16px]'>
-                    <img src={vaso1} className='h-1/2 mr-[10px]' />
-                    <img src={vaso2} className='h-1/2 mr-[10px]' />
-                    <img src={vaso3} className='h-1/2 mr-[10px]' />
+                <div className='flex ml-[58px]'>
+                    <img src={vaso1} className='h-2/5 mr-4' />
+                    <img src={vaso2} className='h-2/5 mr-4' />
+                    <img src={vaso3} className='h-2/5 mr-4' />
                 </div>
             </div>
         </div>
