@@ -1,0 +1,23 @@
+import imagem1 from '../../../src/assets/image 26.png'
+import seta from '../../../src/assets/seta-direita.png'
+
+
+function EscolherProduto() {
+    return (
+        <div className="flex h-[40rem] bg-verde-sofa p-10 w-[49%]">
+            <img src={imagem1} className='' />
+            <div className='pl-10'>
+                <p className='font-encode-expanded text-[2.4rem]'>Alocasia Piccolini</p>
+                <div className='border ' />
+                <h1 className='text-[1.1rem]'>Cultivar uma alocasia piccolini em casa é uma ótima maneira de trazer mais verde para o seu ambiente e melhorar a sua qualidade de vida, além de ser uma ótima opção para quem deseja começar a cultivar plantas em casa, a alocasia piccolini traz muitos benefícios para a saúde. </h1>
+                <br></br>
+                <h1 className='text-[1.1rem]'>Abra a página para sabe se ela é a mais indicada para você </h1>
+                <br></br>
+                <h1 className='text-2xl font-bold'>R$ 129</h1>
+                <img src={seta} className='w-24' />
+            </div>
+        </div>
+    )
+}
+
+export default EscolherProduto
