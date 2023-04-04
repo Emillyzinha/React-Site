@@ -1,0 +1,26 @@
+import EscolherProduto from "../components/escolherProduto/escolherProduto"
+import Nav from "../components/nav/nav"
+import Rodape from "../components/rodape/rodape"
+
+function Produtos() {
+    return (
+        <div>
+            <Nav />
+            <div className="flex justify-center h-screen">
+                <div className="max-w-screen-2xl">
+                    <div>
+                        <h1 className="font-encode-expanded text-5xl">ACERVO</h1>
+                    </div>
+                    <div className="flex justify-between">
+                        <EscolherProduto />
+                        <EscolherProduto />
+                    </div>
+                </div>
+            </div>
+            <Rodape />
+        </div>
+
+    )
+}
+
+export default Produtos
