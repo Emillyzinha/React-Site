@@ -12,7 +12,8 @@ export default {
         'gafata': ['Gafata', 'sans-serif'],
         'galdeano': ['Galdeano', 'sans-serif'],
         'tenor-sans': ['"Tenor Sans"', 'sans-serif'],
-        'encode-expanded': ['Encode Sans Expanded', 'sans-serif']
+        'encode-expanded': ['Encode Sans Expanded', 'sans-serif'],
+        'titulos': ['"Expletus Sans"', 'cursive']
       }
     },
     colors: {
