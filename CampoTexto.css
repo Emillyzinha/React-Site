@@ -1,0 +1,20 @@
+.campo-texto {
+    margin: 24px 0; /* para cima e para baixo, de um lado e para o outro */
+
+}
+
+.campo-texto label {
+    display: block; /* patra quebrar a linha, não ficar do lado do input  */
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.campo-texto input {
+    background-color: #fff;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06); /* para adicionar o SOMBREADO, LADO dele, cor */
+    width: 100%; /* quem vai dizer o tamanho dele é o componente que eu colocá-lo dentro, o componente PAI */
+    border: none;
+    font-size: 24px;
+    padding: 24px; 
+    box-sizing: border-box; /* se não colocar o código não vai considerar o padding com o 100% da tela, estou dizendo que ele tenha tamanho de 100% levando em consideração tudo, margin, padding...   */
+}
