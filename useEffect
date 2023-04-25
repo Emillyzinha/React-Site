@@ -1,0 +1,39 @@
+import { useEffect, useState } from "react"
+
+const Dogs = () => {
+
+    const [racas, setRacas] = useState([])
+    const [busca, setBusca] = useState()
+
+    // quando o componente for renderizado eu quero pegar os dados
+    useEffect(() => { // a função passada como parâmetro do useEffect é executada sempre que é renderizada, então 
+        fetch('http://localhost:3000/doguinhos') // tech é uma promises (promete algo que não sabemos oq nem se vai nos responder aquilo que promete)
+            .then(resposta => resposta.json()) // pegamos a resposta da promises e transformamos em json
+            .then(dados => { // o json também é uma promesis, então quando ele acabar de ser feito nós enfim teremos acesso aos dados
+                setRacas(dados) // quando fazemos o set alteramos o estado do componente. então o componente sempre vai ser renderizado novamente, ele executa o fecth pq precisa renderizado denovo
+            })
+    }, []) // a lista diz que é para o código ser executado só quando o componente for renderizado
+
+    useEffect(() => {
+        if (busca && busca.length > 3) {
+            fetch('http://localhost:3000/doguinhos?nome=' + busca)
+                .then(resposta => resposta.json())
+                .then(dados => {
+                    setRacas(dados)
+                })
+        }
+    }, [busca]) // determina que é para executar o código passado como parâmetro SEMPRE que a busca, algo mudar
+
+    return (
+        <div>
+            <h1>Bem-vindo aos doguinhos</h1>
+            <h4>Confira abaixo uma lista de raças dos doguinhos</h4>
+            <input placeholder='Buscar por raça' onChange={evento => setBusca(evento.target.value)} />
+            <ul>
+                {racas.map(raca => <li key={raca.nome}>{raca.nome}</li>)}
+            </ul>
+        </div>
+    )
+}
+
+export default Dogs
